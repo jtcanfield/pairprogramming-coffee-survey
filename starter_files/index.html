@@ -15,7 +15,7 @@
         <label for="email_address">Email Address:</label>
         <input type="email" name="email_address" id="email_address" placeholder="Email Address"><br>
         <label for="phone_number">Phone Number:</label>
-        <input type="tel" name="phone_number" id"phone_number" placeholder="Phone Number"><br>
+        <input type="tel" name="phone_number" id="phone_number" placeholder="Phone Number"><br>
         <h2>Style of coffee</h2>
         <label for="style_coffee">Which style of coffee do you prefer?</label><br>
           <input type="radio" name="style_coffee" id="Espresso">Espresso<br>
@@ -49,23 +49,26 @@
         <script type="text/javascript">
           var nameInput = document.getElementById('full_name');
           var emailInput = document.getElementById('email_address');
-          var styleInput = document.getElementById('style_coffee');
-          var addonInput = document.getElementById('addons');
-          var sizeInput = document.getElementById('size');
-          var amountInput = document.getElementById('amount');
+          var styleInput = document.getElementsByName('style_coffee');
+          var addonInput = document.getElementById('Other');
+          // var sizeInput = document.getElementById('size');
+          // var amountInput = document.getElementById('amount');
           var signupButton = document.getElementById('submit_button');
           signupButton.addEventListener('click', function(e) {
             var nameVal = nameInput.value;
             var emailVal = emailInput.value;
             var styleVal = styleInput.value;
             var addonVal = addonInput.value;
-            var sizeVal = sizeInput.value;
-            var amountVal = amountInput.value;
+            // var sizeVal = sizeInput.value;
+            // var amountVal = amountInput.value;
             if (nameVal && emailVal) {
-              alert('Thanks for Filling out the survey, ' + nameVal + '. We will email you at ' + emailVal + ". You like "
-              + styleVal + " coffee");
+              alert('Thanks for Filling out the survey, ' + nameVal + '. We will email you at ' + emailVal + ". You like " + styleVal + " coffee. You like to put " + addonVal + " in your coffee");
                 nameInput.value = "";
                 emailInput.value = "";
+                styleInput.value = "";
+                addonInput.value = "";
+                // sizeInput.value = "";
+                // amountInput.value = "";
             } else {
               alert('We would love for you to sign up, please provide both your name and email address.');
             }
