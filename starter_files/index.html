@@ -6,7 +6,65 @@
     </head>
     <body>
         <h1>Coffee Survey</h1>
+        <h2>Contact Info</h2>
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" id="full_name" required><br>
+        <label for="email_address">Email Address:</label>
+        <input type="email" name="email_address" id="email_address"><br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" id"phone_number"><br>
+        <h2>Style of coffee</h2>
+        <label for="style_coffee">Coffee Style:</label><br>
+          <input type="radio" name="style_coffee" id="Espresso">Espresso<br>
+          <input type="radio" name="style_coffee" id="Americano">Americano<br>
+          <input type="radio" name="style_coffee" id="Cappuccino">Cappuccino<br>
+          <input type="radio" name="style_coffee" id="Other">Other
+        <h2>What do you want us to add?:</h2>
+        <label for="addons">Add:</label><br>
+        <input type="checkbox" name"addons" id="Other">Sugar<br>
+        <input type="checkbox" name"addons" id="Other">Artificial Sweetener<br>
+        <input type="checkbox" name"addons" id="Other">Cream<br>
+        <input type="checkbox" name"addons" id="Other">Milk<br>
+        <input type="checkbox" name"addons" id="Other">Butter<br>
+        <input type="checkbox" name"addons" id="Other">Water<br>
+        <h2>Size:</h2>
+        <select name="size" id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <!--
+        **Please provide your contact information**
+            - Full Name _(required)_
+            - Email
+            - Phone Number
 
+        **Which style of coffee do you prefer? _(Choose 1 option)_**
+            - Espresso
+            - Americano
+            - Cappuccino
+            - Other
+
+        **Do you add anything to your coffee? _(Check all that apply)_**
+            - Sugar
+            - Artificial Sweetener
+            - Cream
+            - Milk
+            - Butter
+            - Water
+
+        **What size do you normally order? _(Choose 1 option)_**
+            - Small _(default)_
+            - Medium
+            - Large
+
+        **How many cups of coffee do you drink per day, on average? _(Choose 1 option)_**
+            - Between 0-1 cups _(default)_
+            - Between 2-3 cups
+            - More than 3 cups
+
+        **What is your fondest memory related to coffee?**
+        --   >
         <form action="http://foo.com" method="POST">
         </form>
     </body>
