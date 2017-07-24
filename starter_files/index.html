@@ -8,18 +8,18 @@
         <h1>Coffee Survey</h1>
         <h2>Contact Info</h2>
         <label for="full_name">Full Name:</label>
-        <input type="text" name="full_name" id="full_name" required><br>
+        <input type="text" name="full_name" id="full_name" placeholder="Full name"required><br>
         <label for="email_address">Email Address:</label>
-        <input type="email" name="email_address" id="email_address"><br>
+        <input type="email" name="email_address" id="email_address" placeholder="Email Address"><br>
         <label for="phone_number">Phone Number:</label>
-        <input type="tel" name="phone_number" id"phone_number"><br>
+        <input type="tel" name="phone_number" id"phone_number" placeholder="Phone Number"><br>
         <h2>Style of coffee</h2>
-        <label for="style_coffee">Coffee Style:</label><br>
+        <label for="style_coffee">Which style of coffee do you prefer?</label><br>
           <input type="radio" name="style_coffee" id="Espresso">Espresso<br>
           <input type="radio" name="style_coffee" id="Americano">Americano<br>
           <input type="radio" name="style_coffee" id="Cappuccino">Cappuccino<br>
           <input type="radio" name="style_coffee" id="Other">Other
-        <h2>What do you want us to add?:</h2>
+        <h2>What do you usually add to your coffee?</h2>
         <label for="addons">Add:</label><br>
         <input type="checkbox" name"addons" id="Other">Sugar<br>
         <input type="checkbox" name"addons" id="Other">Artificial Sweetener<br>
@@ -27,12 +27,21 @@
         <input type="checkbox" name"addons" id="Other">Milk<br>
         <input type="checkbox" name"addons" id="Other">Butter<br>
         <input type="checkbox" name"addons" id="Other">Water<br>
-        <h2>Size:</h2>
+        <h2>What size do you usually order?</h2>
         <select name="size" id="size">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
         </select>
+        <h2>How many cups of coffee do you drink per day, on average?<br>
+        <select name="amount" id="amount">
+            <option value="alittle">Between 0-1 cups</option>
+            <option value="some">Between 2-3 cups</option>
+            <option value="alot">More than 3 cups</option>
+        </select>
+        <h2>What is your fondest memory related to coffee?</h2>
+          <br>
+        <textarea name="bio" id="bio" cols="50" rows="10">Fondest Memory of coffee...</textarea>
         <!--
         **Please provide your contact information**
             - Full Name _(required)_
@@ -67,5 +76,13 @@
         --   >
         <form action="http://foo.com" method="POST">
         </form>
+        <div class="submit_container">
+    <button onclick="myFunction()" type="submit" id="submit_button" value="Submit!">SUBMIT!</button>
+    <script>
+      function myFunction() {
+        alert("Thank you for submitting!");
+      }
+    </script>
+</div>
     </body>
 </html>
