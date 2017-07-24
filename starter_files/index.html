@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="style.css">
     <head>
         <meta charset="utf-8">
         <title>Coffee Survey</title>
     </head>
     <body>
+      <form>
+      <!-- <form action="http://foo.com" method="POST"> -->
         <h1>Coffee Survey</h1>
         <h2>Contact Info</h2>
         <label for="full_name">Full Name:</label>
@@ -41,7 +44,33 @@
         </select>
         <h2>What is your fondest memory related to coffee?</h2>
           <br>
-        <textarea name="bio" id="bio" cols="50" rows="10">Fondest Memory of coffee...</textarea>
+        <textarea name="memory" id="memory" cols="50" rows="10">Fondest Memory of coffee...</textarea><br>
+        <button onclick="myFunction()" type="submit" id="submit_button" value="Submit!">SUBMIT!</button>
+        <script type="text/javascript">
+          var nameInput = document.getElementById('full_name');
+          var emailInput = document.getElementById('email_address');
+          var styleInput = document.getElementById('style_coffee');
+          var addonInput = document.getElementById('addons');
+          var sizeInput = document.getElementById('size');
+          var amountInput = document.getElementById('amount');
+          var signupButton = document.getElementById('submit_button');
+          signupButton.addEventListener('click', function(e) {
+            var nameVal = nameInput.value;
+            var emailVal = emailInput.value;
+            var styleVal = styleInput.value;
+            var addonVal = addonInput.value;
+            var sizeVal = sizeInput.value;
+            var amountVal = amountInput.value;
+            if (nameVal && emailVal) {
+              alert('Thanks for Filling out the survey, ' + nameVal + '. We will email you at ' + emailVal + ". You like "
+              + styleVal + " coffee");
+                nameInput.value = "";
+                emailInput.value = "";
+            } else {
+              alert('We would love for you to sign up, please provide both your name and email address.');
+            }
+          });
+          </script>
         <!--
         **Please provide your contact information**
             - Full Name _(required)_
@@ -74,15 +103,6 @@
 
         **What is your fondest memory related to coffee?**
         --   >
-        <form action="http://foo.com" method="POST">
-        </form>
-        <div class="submit_container">
-    <button onclick="myFunction()" type="submit" id="submit_button" value="Submit!">SUBMIT!</button>
-    <script>
-      function myFunction() {
-        alert("Thank you for submitting!");
-      }
-    </script>
-</div>
-    </body>
+    </form>
+  </body>
 </html>
